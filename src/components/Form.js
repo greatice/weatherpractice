@@ -3,9 +3,15 @@ import React from 'react';
 class Form extends React.Component {
     render(){
         return(
-            <div>
-                Form Component
-            </div>
+            <form>
+                <input type='text' name = 'city' placeholder='City...' />
+                <br></br>
+                <input type='text' name = 'Country' placeholder='Country...' />
+                <br></br>
+                <button>
+                    Search Weather
+                </button>
+            </form>
         );
     }
 
