@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  background-color: rgb(41, 40, 40);
+  margin:0,auto;
+  color:lightgray;
+  
+}
+
+Form{
+  width: 90%;
+  margin-left:5%;
+  border-radius: 5%;
+}
+
+
+
+
