@@ -1,10 +1,24 @@
 import React from 'react';
+// import Form from './Form';
 
 class Weather extends React.Component {
     render(){
         return(
             <div>
-                Weather Component
+            {this.props.city && this.props.country && <p>Location: {this.props.city} , {this.props.country}
+               </p> }
+            {this.props.temperature && <p>Current Temperature: {this.props.temperature} 
+               </p> }
+            {this.props.minTemp && <p>Mix Temperature: {this.props.minTemp} 
+               </p> }
+            {this.props.maxTemp && <p>Max Temperature: {this.props.maxTemp} 
+               </p> }
+            {this.props.humidity && <p>Humidity: {this.props.humidity} 
+               </p> }
+            {this.props.description && <p>Conditions: {this.props.description} 
+               </p> }
+            {this.props.error && <p>Note: {this.props.error} 
+               </p> }
             </div>
         );
     }
