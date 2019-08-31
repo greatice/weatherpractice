@@ -23,10 +23,10 @@ const Titles = (props)=> {
     return(
         <div>
                 <h1>
-                    Weather App
+                    Weather Check
                 </h1>
                 <p>
-                    To find out the temperature of where you want to know
+                    To find out the weather condition of where you want to know
                 </p>
         </div>
     );
