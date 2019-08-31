@@ -39,7 +39,7 @@ const Weather = (props)=> {
                        </p> }
                     {props.description && <p>Conditions: {props.description} 
                        </p> }
-                    {props.error && <p>Note: {props.error} 
+                    {props.error && <p>Notice: {props.error} 
                        </p> }
                     </div>
                 );
