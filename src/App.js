@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 const API_KEY = 'f527754a92e1b7ddc83207cbdc0b955b';
 class App extends React.Component {
- 
+
   constructor(props){
     super(props);
     this.state = {
