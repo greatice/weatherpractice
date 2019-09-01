@@ -21,11 +21,17 @@ class App extends React.Component {
         error : undefined
     }
   }
-  getWeather = async (e) => {
-    e.preventDefault();
+  getWeather = async (e) => { //因为用了await，所以function必须是规定是 async的，异步的。
+    e.preventDefault(); //await的对象必须是promise，fetch和axios返回的就是promise
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
     const api_call = await fetch (`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+  // const api_call = await axios (`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+  // response.data.main.temp
+  // 定义了 async的函数返回一个Promise（异步）的值（function 的 return type 被改变了）, 所以所有的需要调用这个函数的上层函数也需要定义async 关键字，因为只要底层引用过一个async，外层都要用。
+
+  
+   
     const data = await api_call.json();
    
     if (city && country){
@@ -38,6 +44,7 @@ class App extends React.Component {
         country: data.sys.country,
         humidity: data.main.humidity,
         description: data.weather[0].description,
+        // forecasts: resizeBy.data.forecast.slice(0,10), //用来显示10个天气预报
         error:''
     });
     }
